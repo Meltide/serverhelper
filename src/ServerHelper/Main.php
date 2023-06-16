@@ -43,9 +43,12 @@ class Main extends PluginBase implements Listener{
 	"PlayerMessP5"=>"§a==服务器帮助(5/5)==\n§a待修改"
 	));
     $this->getServer()->getPluginManager()->registerEvents($this,$this);
-    $this->getLogger()->info(TextFormat::GREEN."✔ServerHelper成功启用");
-    $this->getLogger()->info(TextFormat::YELLOW."作者:AMDISYES  QQ:3480656548");
-    $this->getLogger()->info(TextFormat::RED."倒卖插件死全家  wusheng233禁止使用");
+    $this->getLogger()->info("§b=======================");
+    $this->getLogger()->info("§a✔ServerHelper成功启用");
+    $this->getLogger()->info("§e作者:AMDISYES  QQ:3480656548");
+    $this->getLogger()->info("§6访问我们的Github页面:https://github.com/AMDISYES/serverhelper");
+    $this->getLogger()->info("§c倒卖插件死全家  wusheng233禁止使用");
+    $this->getLogger()->info("§b=======================");
   }
   public function onDisable(){
     $this->getLogger()->info(TextFormat::RED."✘ServerHelper已关闭");
