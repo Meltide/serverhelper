@@ -22,14 +22,22 @@ commands:
   sh:
     description: "服务器帮助"
     permission: sh.command.player
-  opsh:
-    description: "OP帮助"
+    usage: /sh <1|2|3|4|5>
+  shm:
+    description: "管理命令"
     permission: sh.command.op
+    usage: /shm <reload|version>
+  bread:
+    description: "获得面包"
+    permission: sh.command.player
 permissions:
   sh.command:
     default: true
+    description: "根权限"
     children:
       sh.command.player:
         default: true
+        description: "玩家权限"
       sh.command.op:
         default: op
+        description: "管理权限"
