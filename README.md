@@ -32,15 +32,33 @@ QQ：3480656548
 
 ```
 ---
-#玩家进出服的人数提示(ON/OFF)
+#玩家进出服提示(ON/OFF)
 OnlineTip: "ON"
-#服务器帮助内容
-PlayerMess: |-
-  §a==服务器帮助(1/1)==
+#给面包功能(ON/OFF)
+GiveBread: "ON"
+#给面包的个数
+BreadNum: 16
+#服务器帮助(ON/OFF)
+ServerHelp: "ON"
+#服务器帮助第一页
+PlayerMessP1: |-
+  §a==服务器帮助(1/5)==
   §a待修改
-#OP帮助内容
-OPMess: |-
-  §a==OP帮助(1/1)==
+#服务器帮助第二页
+PlayerMessP2: |-
+  §a==服务器帮助(2/5)==
+  §a待修改
+#服务器帮助第三页
+PlayerMessP3: |-
+  §a==服务器帮助(3/5)==
+  §a待修改
+#服务器帮助第四页
+PlayerMessP4: |-
+  §a==服务器帮助(4/5)==
+  §a待修改
+#服务器帮助第五页
+PlayerMessP5: |-
+  §a==服务器帮助(5/5)==
   §a待修改
 ...
 ```
