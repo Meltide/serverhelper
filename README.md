@@ -14,8 +14,8 @@ QQ：3480656548
 
 - [x] `/sh` 服务器帮助
 - [x] `/shm` 管理命令
-  - `/shm reload` 重载插件配置文件
-  - `/shm version` 插件版本
+ - `/shm reload` 重载插件配置文件
+ - `/shm version` 插件版本
 - [x] `/bread` 给面包
 - [x] 玩家进出服的人数提示
 ---
