@@ -81,41 +81,49 @@ class Main extends PluginBase implements Listener{
     if($cmd->getName() == "sh"){
       if($playerm == "ON"){
         if(!isset($args[0]) or (is_int($args[0]) and $args[0] > 0)){
-          $sender->sendMessage($playerm1);
-        }else{
-          if($args[0] == 1){
+          return false;
+        }
+        switch($args[0]){
+          case "1":
             $sender->sendMessage($playerm1);
-          }
-          if($args[0] == 2){
+            break;
+          case "2":
             $sender->sendMessage($playerm2);
-          }
-          if($args[0] == 3){
+            break;
+          case "3":
             $sender->sendMessage($playerm3);
-          }
-          if($args[0] == 4){
+            break;
+          case "4":
             $sender->sendMessage($playerm4);
-          }
-          if($args[0] == 5){
+            break;
+          case "5":
             $sender->sendMessage($playerm5);
-          }
+            break;
+          default:
+            return false;
+            break;
         }
       }else{
         $sender->sendMessage(TextFormat::RED."服主未开启服务器帮助功能");
       }
     }
     if($cmd->getName() == "shm"){
-      if(!isset($args[0]) or (is_int($args[0]) and $args[0] > 0)) {
+      if(!isset($args[0]) or (is_int($args[0]) and $args[0] > 0)){
         return false;
-      }else{
-        if($args[0] == "reload"){
+      }
+      switch($args[0]){
+        case "reload":
           $this->reloadConfig();
           $sender->sendMessage(TextFormat::GREEN."重载配置文件完成");
-        }
-        if($args[0] == "version"){
+          break;
+        case "version":
           $sender->sendMessage("§bServerHelper 插件版本:1.0.0");
           $sender->sendMessage("§b作者:AMDISYES  QQ:3480656548");
           $sender->sendMessage(TextFormat::RED."倒卖本插件死全家/wusheng233禁止使用");
-        }
+          break;
+        default:
+          return false;
+          break;
       }
     }
     if($cmd->getName() == "bread"){
