@@ -1,14 +1,13 @@
+<div align="center">
+
 # ServerHelper
 
-#### 一个并不全能的PocketMine-MP插件
-
----
+**一个并不全能的PocketMine-MP插件**
 
 作者：AMDISYES  
-
 QQ：3480656548  
 
-###### 倒卖本插件死全家 wusheng233禁止使用
+###### 倒卖本插件死全家
 ---
 ### 目前实现的功能
 
