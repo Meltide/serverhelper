@@ -1,7 +1,12 @@
 <div align="center">
 
 # ServerHelper
-
+![GitHub repo size](https://img.shields.io/github/repo-size/Meltide/serverhelper)
+![GitHub Repo stars](https://img.shields.io/github/stars/Meltide/serverhelper?style=flat)
+![GitHub branch status](https://img.shields.io/github/checks-status/Meltide/serverhelper/main)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/t/Meltide/serverhelper)
+![GitHub last commit](https://img.shields.io/github/last-commit/Meltide/serverhelper)
+![GitHub Created At](https://img.shields.io/github/created-at/Meltide/serverhelper)
 **一个并不全能的PocketMine-MP插件**
 
 </div>
