@@ -7,7 +7,7 @@
 作者：AMDISYES  
 QQ：3480656548  
 
-**倒卖本插件死全家**
+<div font-color="red">倒卖本插件死全家</div>
 
 </div>
 
