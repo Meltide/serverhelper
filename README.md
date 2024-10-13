@@ -4,11 +4,6 @@
 
 **一个并不全能的PocketMine-MP插件**
 
-作者：AMDISYES  
-QQ：3480656548  
-
-<div font-color="red">倒卖本插件死全家</div>
-
 </div>
 
 ## 目前实现的功能
