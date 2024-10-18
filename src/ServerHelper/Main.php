@@ -59,7 +59,6 @@ class Main extends PluginBase implements Listener{
       $online = count($this->getServer()->getOnlinePlayers());
       $this->getServer()->broadcastMessage("§6当前服务器人数: $online");
     }
-    else{}
   }
   public function onQuit(PlayerQuitEvent $event){
     $tip = $this->getConfig()->get("OnlineTip");
@@ -67,22 +66,21 @@ class Main extends PluginBase implements Listener{
       $online = count($this->getServer()->getOnlinePlayers());
       $this->getServer()->broadcastMessage("§6当前服务器人数: $online");
     }
-    else{}
   }
   public function onCommand(CommandSender $sender, Command $cmd, $label, array $args){
-    $playerm = $this->getConfig()->get("ServerHelp");
-    $playerm1 = $this->getConfig()->get("PlayerMessP1");
-    $playerm2 = $this->getConfig()->get("PlayerMessP2");
-    $playerm3 = $this->getConfig()->get("PlayerMessP3");
-    $playerm4 = $this->getConfig()->get("PlayerMessP4");
-    $playerm5 = $this->getConfig()->get("PlayerMessP5");
-    $bread = $this->getConfig()->get("GiveBread");
-    $bnum = $this->getConfig()->get("BreadNum");
     if($cmd->getName() == "sh"){
+      $playerm = $this->getConfig()->get("ServerHelp");
       if($playerm == "ON"){
         if(!isset($args[0]) or (is_int($args[0]) and $args[0] > 0)){
           return false;
         }
+
+        $playerm1 = $this->getConfig()->get("PlayerMessP1");
+        $playerm2 = $this->getConfig()->get("PlayerMessP2");
+        $playerm3 = $this->getConfig()->get("PlayerMessP3");
+        $playerm4 = $this->getConfig()->get("PlayerMessP4");
+        $playerm5 = $this->getConfig()->get("PlayerMessP5");
+
         switch($args[0]){
           case "1":
             $sender->sendMessage($playerm1);
@@ -101,13 +99,12 @@ class Main extends PluginBase implements Listener{
             break;
           default:
             return false;
-            break;
         }
       }else{
         $sender->sendMessage(TextFormat::RED."服主未开启服务器帮助功能");
       }
-    }
-    if($cmd->getName() == "shm"){
+
+    }elseif($cmd->getName() == "shm"){
       if(!isset($args[0]) or (is_int($args[0]) and $args[0] > 0)){
         return false;
       }
@@ -123,22 +120,22 @@ class Main extends PluginBase implements Listener{
           break;
         default:
           return false;
-          break;
       }
-    }
-    if($cmd->getName() == "bread"){
-      if(!$sender instanceof Player){
-        $sender->sendMessage(TextFormat::RED."这个命令只适用于玩家！请在游戏中执行这个命令！");
-      }else{
-        if($bread == "ON"){
-          $sender->getPlayer()->getInventory()->addItem(new Item(297,0,$bnum));
-          $sender->sendMessage(TextFormat::YELLOW."你获得了".$bnum."个面包");
+
+    }elseif($cmd->getName() == "bread") {
+      $bread = $this->getConfig()->get("GiveBread");
+      if($bread == "ON"){
+        if(!$sender instanceof Player){
+          $sender->sendMessage(TextFormat::RED . "这个命令只适用于玩家！请在游戏中执行这个命令！");
         }else{
-          $sender->sendMessage(TextFormat::RED."服主未开启获得面包功能");
+          $bnum = $this->getConfig()->get("BreadNum");
+          $sender->getPlayer()->getInventory()->addItem(new Item(297, 0, $bnum));
+          $sender->sendMessage(TextFormat::YELLOW . "你获得了" . $bnum . "个面包");
         }
+      }else{
+        $sender->sendMessage(TextFormat::RED . "服主未开启获得面包功能");
       }
     }
     return true;
   }
 }
-?>
