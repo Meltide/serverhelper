@@ -47,7 +47,7 @@ class Main extends PluginBase implements Listener{
     $this->getLogger()->info("§a✔ServerHelper成功启用");
     $this->getLogger()->info("§e作者:AMDISYES  QQ:3480656548");
     $this->getLogger()->info("§6访问我们的Github页面:https://github.com/AMDISYES/serverhelper");
-    $this->getLogger()->info("§c倒卖插件死全家  wusheng233禁止使用");
+    $this->getLogger()->info("§c倒卖插件死全家");
     $this->getLogger()->info("§b=======================");
   }
   public function onDisable(){
