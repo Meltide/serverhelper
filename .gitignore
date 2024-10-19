@@ -1,0 +1,11 @@
+# Common IDEs
+.idea/*
+!.idea/codeStyles/
+!.idea/fileTemplates/
+nbproject/*
+
+# Windows image file caches
+Thumbs.db
+
+# Folder config file
+Desktop.ini
