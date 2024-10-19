@@ -9,7 +9,7 @@ namespace ServerHelper;
  * |___/\___|_|  \_/\___|_| |_||_\___|_| .__/\___|_|  
  *                                     |_|            
  * ServerHelper by AMDISYES QQ:3480656548
- * 倒卖本插件死全家 wusheng233禁止使用
+ * 倒卖本插件死全家
  *
  */
  
@@ -114,9 +114,9 @@ class Main extends PluginBase implements Listener{
           $sender->sendMessage(TextFormat::GREEN."重载配置文件完成");
           break;
         case "version":
-          $sender->sendMessage("§bServerHelper 插件版本:1.0.0");
+          $sender->sendMessage("§bServerHelper 插件版本:1.2.0");
           $sender->sendMessage("§b作者:AMDISYES  QQ:3480656548");
-          $sender->sendMessage(TextFormat::RED."倒卖本插件死全家/wusheng233禁止使用");
+          $sender->sendMessage(TextFormat::RED."倒卖本插件死全家");
           break;
         default:
           return false;
